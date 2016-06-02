@@ -1,12 +1,9 @@
-/* ===  gallery.js  06/01/2016  SeaWuf  === */
+/* ===  gallery.js  06/02/2016  SeaWuf  === */
 
 var origText = null; // global
 
 function upDate(previewPic){
-  var theImage = "url" + "(" + previewPic.src.toLowerCase() + ")";
-  console.log("theImage: " + theImage);
-  document.getElementById("image").style.backgroundImage = theImage;
-  document.getElementById("image").style.backgroundColor = "#f33";
+  document.getElementById("image").style.background = "#f33 url" + "(" + previewPic.src.trim() + ")";
 
   origText = document.getElementById("image").innerHTML.trim();
   document.getElementById("image").innerHTML = previewPic.alt;
